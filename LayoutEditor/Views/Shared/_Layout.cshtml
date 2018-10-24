@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="title" content="Create page with Bootstrap">
+    <meta name="description" content="Create page with Bootstrap">
+    <meta name="keywords" content="Create page with Bootstrap">
+    <title>Bootstrap Page Builder</title>
+        <link href="css/toolbox.css" rel="stylesheet">
+    <link href="css/editor.css" rel="stylesheet">
+    <link href="css/docs.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <style>
+  .container-fluid{
+      *zoom:1;margin-left: 0px;
+      margin-top: 10px;
+      padding: 30px 15px 15px;
+      border: 1px solid #DDDDDD;
+      border-radius: 4px;
+      position: relative;
+      word-wrap: break-word;
+  }
+  body.devpreview {
+      margin-top: 60px;
+      margin-left:5px !important;
+  }
+   span.fa-6{
+    font-size: 20em;
+}
+span.fa-5{
+    font-size: 12em;
+}
+span.fa-4{
+    font-size: 7em;
+}
+span.fa-3{
+    font-size: 4em;
+}
+span.fa-2{
+    font-size: 2em;
+}
+  </style>
+</head>
+<body style="cursor: auto;" class="edit toolbox-reset">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+              <div class="navbar-header" style="margin-right: 100px;">
+        <a class="navbar-brand emphasized3" href="#">
+          Bootstrap Page Builder
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+        <ul class="nav navbar-nav">
+          <li>
+            <div class="btn-group" style="margin-right: 20px;">
+              <button onclick="resizeCanvas('lg')" class="btn btn-default navbar-btn"><i class="fa fa-desktop"></i> </button>
+              <button onclick="resizeCanvas('md')" class="btn btn-default navbar-btn"><i class="fa fa-laptop"></i> </button>
+              <button onclick="resizeCanvas('sm')" class="btn btn-default navbar-btn"><i class="fa fa-tablet"></i> </button>
+              <button onclick="resizeCanvas('xs')" class="btn btn-default navbar-btn"><i class="fa fa-mobile-phone"></i> </button>
+            </div>
+          </li>
+          <li>
+            <div class="btn-group" data-toggle="buttons-radio">
+              <button id="edit" class="btn btn-default navbar-btn">
+                <i class="fa fa-edit"></i> Edit
+              </button>
+              <button type="button" class="btn btn-default navbar-btn" id="devpreview">
+                <i class="fa icon-eye-close" style="color: #333;"></i> Developer
+              </button>
+              <button type="button" class="btn btn-default navbar-btn" id="sourcepreview" >
+                <i class="fa icon-eye-open" style="color: #333;"></i> Preview
+              </button>
+            </div>
+          </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <div class="btn-group">
+              <button class="btn btn-default navbar-btn" href="#clear" id="clear" color="#333;">
+                <i class="fa icon-trash" style="color: #333;"></i>Clear
+              </button>
+              <button type="button" class="btn btn-primary navbar-btn" data-target="#downloadModal" rel="/build/downloadModal" role="button" data-toggle="modal">
+                <i class="fa icon-chevron-down" ></i>Download
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+
+        <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/jquery.htmlClean.js"></script>
+    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="ckeditor/config.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/FileSaver.js"></script>
+    <script type="text/javascript" src="js/blob.js"></script>
+    <script src="js/docs.min.js"></script>
+    <script>
+      function resizeCanvas(size)
+      {
+
+      var containerID = document.getElementsByClassName("changeDimension");
+      var containerDownload = document.getElementById("download-layout").getElementsByClassName("container-fluid")[0];
+      var row = document.getElementsByClassName("demo ui-sortable");
+      var container1 = document.getElementsByClassName("container1");
+      if (size == "md")
+      {
+      $(containerID).width('id', "MD");
+      $(row).attr('id', "MD");
+      $(container1).attr('id', "MD");
+      $(containerDownload).attr('id', "MD");
+      }
+      if (size == "lg")
+      {
+      $(containerID).attr('id', "LG");
+      $(row).attr('id', "LG");
+      $(container1).attr('id', "LG");
+      $(containerDownload).attr('id', "LG");
+      }
+      if (size == "sm")
+      {
+      $(containerID).attr('id', "SM");
+      $(row).attr('id', "SM");
+      $(container1).attr('id', "SM");
+      $(containerDownload).attr('id', "SM");
+      }
+      if (size == "xs")
+      {
+      $(containerID).attr('id', "XS");
+      $(row).attr('id', "XS");
+      $(container1).attr('id', "XS");
+      $(containerDownload).attr('id', "XS");
+
+      }
+
+
+      }
+    </script>
+</body>
+</html>
