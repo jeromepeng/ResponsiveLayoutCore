@@ -27,6 +27,10 @@
         {
             "Name": "Image",
             "Preview": "Image"
+        },
+        {
+            "Name": "Header",
+            "Preview": "Header"
         }
     ]
 }
