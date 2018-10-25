@@ -1,0 +1,23 @@
+{
+    "AllGrids": [{
+            "Sizes": "12",
+            "Styles": ["col-xs-12 column"]
+        },
+        {
+            "Sizes": "6 6",
+            "Styles": ["col-xs-6 column", "col-xs-6 column"]
+        },
+        {
+            "Sizes": "8 4",
+            "Styles": ["col-xs-8 column", "col-xs-4 column"]
+        },
+        {
+            "Sizes": "4 4 4",
+            "Styles": ["col-xs-4 column", "col-xs-4 column", "col-xs-4 column"]
+        },
+        {
+            "Sizes": "2 5 5",
+            "Styles": ["col-xs-2 column", "col-xs-5 column", "col-xs-5 column"]
+        }
+    ]
+}
