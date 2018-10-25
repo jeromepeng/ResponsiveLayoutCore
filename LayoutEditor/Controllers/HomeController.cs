@@ -16,7 +16,6 @@ namespace LayoutEditor.Controllers
     {
         private readonly IHostingEnvironment _hostingEnvironment;
 
-        private readonly Elements allElements;
         public IActionResult Index()
         {
             string webRootPath = _hostingEnvironment.WebRootPath;
@@ -29,7 +28,7 @@ namespace LayoutEditor.Controllers
 
                 if (s > 0)
                 {
-                    IndexViewModel ivm = new IndexViewModel(Encoding.UTF8.GetString(buff));
+                    IndexViewModel ivm = new IndexViewModel(Encoding.UTF8.GetString(buff), webRootPath);
                     return View(ivm);
                 }
             }
@@ -64,6 +63,7 @@ namespace LayoutEditor.Controllers
         public HomeController(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
+            
         }
     }
 }

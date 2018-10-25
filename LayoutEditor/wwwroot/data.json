@@ -19,5 +19,14 @@
             "Sizes": "2 5 5",
             "Styles": ["col-xs-2 column", "col-xs-5 column", "col-xs-5 column"]
         }
+    ],
+    "AllBaseCsses": [{
+            "Name": "Title",
+            "Preview": "Title"
+        },
+        {
+            "Name": "Image",
+            "Preview": "Image"
+        }
     ]
 }
