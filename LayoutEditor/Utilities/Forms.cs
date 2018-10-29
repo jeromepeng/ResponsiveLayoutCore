@@ -5,11 +5,11 @@ using LayoutEditor.Common;
 
 namespace LayoutEditor.Utilities
 {
-    public class BaseCss : BaseUtility
-    {
+    public class Forms : BaseUtility
+    {      
         override public void Initial(string htmlPath)
         {
-            htmlContentPath = htmlPath + "//Views//Elements//BASECSS//" + Name + "//";
+            htmlContentPath = htmlPath + "//Views//Elements//FORMS//" + Name + "//";
         }
     }
 }

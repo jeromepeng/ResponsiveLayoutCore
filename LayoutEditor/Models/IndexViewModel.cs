@@ -15,6 +15,10 @@ namespace LayoutEditor.Models
             {
                 baseCss.Initial(rootPath.Substring(0, rootPath.LastIndexOf("\\")));
             }
+            foreach (Forms forms in AllElements.AllForms)
+            {
+                forms.Initial(rootPath.Substring(0, rootPath.LastIndexOf("\\")));
+            }
         }
     }
 }

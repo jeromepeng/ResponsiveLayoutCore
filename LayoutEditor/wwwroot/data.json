@@ -32,5 +32,18 @@
             "Name": "Header",
             "Preview": "Header"
         }
+    ],
+    "AllForms": [{
+            "Name": "BasicSelect",
+            "Preview": "BasicSelect"
+        },
+        {
+            "Name": "MultipleCheckbox",
+            "Preview": "MultipleCheckbox"
+        },
+        {
+            "Name": "TextArea",
+            "Preview": "TextArea"
+        }
     ]
 }
