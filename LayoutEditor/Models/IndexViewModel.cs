@@ -11,13 +11,29 @@ namespace LayoutEditor.Models
         public IndexViewModel(string data, string rootPath)
         {
             AllElements = JsonConvert.DeserializeObject<Elements>(data);
-            foreach (BaseCss baseCss in AllElements.AllBaseCsses)
+            if (AllElements != null)
             {
-                baseCss.Initial(rootPath.Substring(0, rootPath.LastIndexOf("\\")));
-            }
-            foreach (Forms forms in AllElements.AllForms)
-            {
-                forms.Initial(rootPath.Substring(0, rootPath.LastIndexOf("\\")));
+                if (AllElements.AllBaseCsses != null)
+                {
+                    foreach (BaseCss baseCss in AllElements.AllBaseCsses)
+                    {
+                        baseCss.Initial(rootPath.Substring(0, rootPath.LastIndexOf("\\")));
+                    }
+                }
+                if (AllElements.AllForms != null)
+                {
+                    foreach (Forms forms in AllElements.AllForms)
+                    {
+                        forms.Initial(rootPath.Substring(0, rootPath.LastIndexOf("\\")));
+                    }
+                }
+                if (AllElements.AllComponents != null)
+                {
+                    foreach (Component component in AllElements.AllComponents)
+                    {
+                        component.Initial(rootPath.Substring(0, rootPath.LastIndexOf("\\")));
+                    }
+                }
             }
         }
     }

@@ -45,5 +45,18 @@
             "Name": "TextArea",
             "Preview": "TextArea"
         }
+    ],
+    "AllComponents": [{
+            "Name": "Navs",
+            "Preview": "Navs"
+        },
+        {
+            "Name": "NavigationList",
+            "Preview": "NavigationList"
+        },
+        {
+            "Name": "Table",
+            "Preview": "Table"
+        }
     ]
 }
