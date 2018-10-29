@@ -34,6 +34,13 @@ namespace LayoutEditor.Models
                         component.Initial(rootPath.Substring(0, rootPath.LastIndexOf("\\")));
                     }
                 }
+                if (AllElements.AllJavaScripts != null)
+                {
+                    foreach (JavaScript javaScript in AllElements.AllJavaScripts)
+                    {
+                        javaScript.Initial(rootPath.Substring(0, rootPath.LastIndexOf("\\")));
+                    }
+                }
             }
         }
     }

@@ -58,5 +58,26 @@
             "Name": "Table",
             "Preview": "Table"
         }
+    ],
+    "AllJavaScripts": [{
+            "Name": "4Taps",
+            "Preview": "4Taps"
+        },
+        {
+            "Name": "Carousel",
+            "Preview": "Carousel"
+        },
+        {
+            "Name": "Collapse",
+            "Preview": "Collapse"
+        },
+        {
+            "Name": "Modal",
+            "Preview": "Modal"
+        },
+        {
+            "Name": "Navbar",
+            "Preview": "Navbar"
+        }
     ]
 }

@@ -8,5 +8,6 @@ namespace LayoutEditor.Utilities
         public BaseCss[] AllBaseCsses {get; set;}
         public Forms[] AllForms {get; set;}
         public Component[] AllComponents {get; set;}
+        public JavaScript[] AllJavaScripts {get; set;}
     }
 }
